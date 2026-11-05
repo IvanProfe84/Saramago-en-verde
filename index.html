@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saramago en verde</title>
+  <style>
+    /* Estilos base y paleta de colores verdes */
+    :root {
+      --verde-principal: #2e7d32;
+      --verde-oscuro: #1b5e20;
+      --verde-claro: #e8f5e9;
+      --texto-oscuro: #333333;
+      --blanco: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--texto-oscuro);
+      background-color: #f9f9f9;
+    }
+
+    /* Encabezado */
+    header {
+      background-color: var(--verde-principal);
+      color: var(--blanco);
+      padding: 1.5rem 1rem;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    /* Menú de navegación horizontal */
+    nav {
+      background-color: var(--verde-oscuro);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav li {
+      position: relative;
+    }
+
+    nav a {
+      display: block;
+      color: var(--blanco);
+      text-decoration: none;
+      padding: 1rem 1.5rem;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: var(--verde-principal);
+    }
+
+    /* Desplegables del menú */
+    nav li:hover > ul {
+      display: block;
+    }
+
+    nav ul ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: var(--verde-oscuro);
+      min-width: 220px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+    }
+
+    nav ul ul li {
+      width: 100%;
+    }
+
+    nav ul ul a {
+      padding: 0.8rem 1.2rem;
+      font-size: 0.95rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* Contenido principal */
+    main {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    section {
+      background-color: var(--blanco);
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    h2 {
+      color: var(--verde-principal);
+      margin-bottom: 1rem;
+      border-bottom: 2px solid var(--verde-claro);
+      padding-bottom: 0.5rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    /* Estilos para las imágenes de la carpeta img/ */
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .foto-principal {
+      width: 100%;
+      max-height: 450px;
+      object-fit: cover;
+      margin-top: 1rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Galería de las 3 imágenes en horizontal para Reivindicaciones */
+    .galeria-reivindicaciones {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+
+    .galeria-reivindicaciones .foto-galeria {
+      flex: 1 1 30%;
+      min-width: 250px;
+      height: 220px;
+      object-fit: cover;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .galeria-reivindicaciones .foto-galeria:hover {
+      transform: scale(1.02);
+    }
+
+    /* Pie de página */
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background-color: var(--verde-oscuro);
+      color: var(--blanco);
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <header>
+    <h1>Saramago en verde 💚</h1>
+  </header>
+
+  <!-- MENÚ DE NAVEGACIÓN -->
+  <nav>
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li>
+        <a href="#reivindicaciones">Reivindicaciones ▾</a>
+        <ul>
+          <li><a href="#bajada-ratios">Bajada de ratios</a></li>
+          <li><a href="#atencion-diversidad">Atención a la diversidad</a></li>
+        </ul>
+      </li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main>
+
+    <!-- SECCIÓN INICIO -->
+    <section id="inicio">
+      <h2>Inicio</h2>
+      <p>Bienvenidos a Saramago en Verde, la plataforma donde impulsamos la educación de calidad y la defensa de nuestra comunidad educativa.</p>
+      
+      <!-- Imagen única en la sección de inicio -->
+      <img src="img/inicio1.jpeg" alt="Inicio Saramago en Verde" class="foto-principal" loading="lazy">
+    </section>
+
+    <!-- SECCIÓN REIVINDICACIONES -->
+    <section id="reivindicaciones">
+      <h2>Reivindicaciones</h2>
+      <p>Nuestras prioridades y demandas activas para mejorar las condiciones de enseñanza y aprendizaje en las aulas.</p>
+      
+      <!-- Las 3 imágenes de reivindicaciones seguidas -->
+      <div class="galeria-reivindicaciones">
+        <img src="img/reiv1.jpg" alt="Reivindicación 1" class="foto-galeria" loading="lazy">
+        <img src="img/reiv2.jpeg" alt="Reivindicación 2" class="foto-galeria" loading="lazy">
+        <img src="img/reiv3.jpeg" alt="Reivindicación 3" class="foto-galeria" loading="lazy">
+      </div>
+    </section>
+
+    <!-- SUBSECCIONES -->
+    <section id="bajada-ratios">
+      <h2>Bajada de ratios</h2>
+      <p>Exigimos un número reducido de alumnos por aula para garantizar una atención personalizada a cada estudiante.</p>
+    </section>
+
+    <section id="atencion-diversidad">
+      <h2>Atención a la diversidad</h2>
+      <p>Recursos suficientes y personal especializado para atender las necesidades educativas específicas de todo nuestro alumnado.</p>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>¿Quieres colaborar o sumarte a la iniciativa? Escríbenos para participar activamente en nuestras acciones.</p>
+    </section>
+
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <p>&copy; Saramago en verde - Comunidad Educativa en Acción</p>
+  </footer>
+
+</body>
+</html>
